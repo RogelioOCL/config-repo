@@ -1,7 +1,11 @@
+server:
+  port: 8080
+
 spring:
-  application:
-    name: ms-customer
-  config:
-    import: "optional:configserver:http://localhost:8001"
-  profiles:
-    active: dev
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: bootcambd
+
+customer:
+  message: "Hola desde configuración remota con MongoDB"
